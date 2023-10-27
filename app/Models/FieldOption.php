@@ -12,7 +12,6 @@ class FieldOption extends Model
 
     protected $fillable = [
         'label',
-        'value',
         'ratio',
         'field_id',
         'skill_id',
