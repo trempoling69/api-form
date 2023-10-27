@@ -18,4 +18,9 @@ class Theme extends Model
     {
         return $this->hasMany(Form::class);
     }
+
+    public function celebrities(): HasMany
+    {
+        return $this->hasMany(Celebrity::class);
+    }
 }

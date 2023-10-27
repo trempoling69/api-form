@@ -7,28 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Field extends Model
+class Skill extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'label',
-        'form_id',
-        'order',
+        'name',
         'category_id',
     ];
-
-    public function forms(): BelongsTo
-    {
-        return $this->belongsTo(Form::class);
-    }
 
     public function categories(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
-    public function FieldOptions(): HasMany
+    public function fieldOptions(): HasMany
     {
         return $this->hasMany(FieldOption::class);
     }

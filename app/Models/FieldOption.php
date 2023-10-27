@@ -15,10 +15,16 @@ class FieldOption extends Model
         'value',
         'ratio',
         'field_id',
+        'skill_id',
     ];
 
     public function fields(): BelongsTo
     {
         return $this->belongsTo(Field::class);
+    }
+
+    public function skills(): BelongsTo
+    {
+        return $this->belongsTo(Skill::class);
     }
 }

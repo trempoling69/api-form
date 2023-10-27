@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('field_options', function (Blueprint $table) {
+        Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->string('label');
-            $table->string('value');
-            $table->integer('ratio');
-            $table->foreignId('field_id')->constrained()->onDelete('cascade');
+            $table->json('answer_raw');
+            $table->string('profil');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('form_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('field_options');
+        Schema::dropIfExists('answers');
     }
 };

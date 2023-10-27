@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('label');
             $table->integer('order');
             $table->foreignId('form_id')->constrained()->onDelete('cascade');
+            $table->foreignId('category_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

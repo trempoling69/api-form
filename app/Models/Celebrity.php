@@ -5,29 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Form extends Model
+class Celebrity extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
+        'name',
+        'description',
         'theme_id',
+        'profil',
     ];
 
     public function themes(): BelongsTo
     {
         return $this->belongsTo(Theme::class);
-    }
-
-    public function fields(): HasMany
-    {
-        return $this->hasMany(Field::class);
-    }
-
-    public function answers(): HasMany
-    {
-        return $this->hasMany(Answer::class);
     }
 }
