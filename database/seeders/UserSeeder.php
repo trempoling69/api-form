@@ -18,7 +18,7 @@ class UserSeeder extends Seeder
         User::factory()->create([
             'name' => 'Romain',
             'email' => 'romain@akanema.fr',
-            'password' => 'testForm',
+            'password' => 'formtest',
         ]);
     }
 }

@@ -19,11 +19,11 @@ class FieldOption extends Model
 
     public function fields(): BelongsTo
     {
-        return $this->belongsTo(Field::class);
+        return $this->belongsTo(Field::class, 'field_id');
     }
 
     public function skills(): BelongsTo
     {
-        return $this->belongsTo(Skill::class);
+        return $this->belongsTo(Skill::class, 'skill_id');
     }
 }

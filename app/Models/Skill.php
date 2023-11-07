@@ -14,11 +14,12 @@ class Skill extends Model
     protected $fillable = [
         'name',
         'category_id',
+        'letter'
     ];
 
     public function categories(): BelongsTo
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id');
     }
 
     public function fieldOptions(): HasMany

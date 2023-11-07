@@ -22,34 +22,42 @@ class SkillSeeder extends Seeder
 
         Skill::create([
             'name' => 'skill1_category1',
+            'letter' => 'A',
             'category_id' => $category1Id
         ]);
         Skill::create([
             'name' => 'skill2_category1',
+            'letter' => 'B',
             'category_id' => $category1Id
         ]);
         Skill::create([
             'name' => 'skill1_category2',
+            'letter' => 'C',
             'category_id' => $category2Id
         ]);
         Skill::create([
             'name' => 'skill2_category2',
+            'letter' => 'D',
             'category_id' => $category2Id
         ]);
         Skill::create([
             'name' => 'skill1_category3',
+            'letter' => 'E',
             'category_id' => $category3Id
         ]);
         Skill::create([
             'name' => 'skill2_category3',
+            'letter' => 'F',
             'category_id' => $category3Id
         ]);
         Skill::create([
             'name' => 'skill1_category4',
+            'letter' => 'G',
             'category_id' => $category4Id
         ]);
         Skill::create([
             'name' => 'skill2_category4',
+            'letter' => 'H',
             'category_id' => $category4Id
         ]);
     }

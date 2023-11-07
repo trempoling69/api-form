@@ -29,19 +29,43 @@ class FieldSeeder extends Seeder
         ]);
         Field::create([
             'label' => 'Question_2',
-            'order' => 1,
+            'order' => 2,
             'category_id' => $category2Id,
             'form_id' => $formId,
         ]);
         Field::create([
             'label' => 'Question_3',
-            'order' => 1,
+            'order' => 3,
             'category_id' => $category3Id,
             'form_id' => $formId,
         ]);
         Field::create([
             'label' => 'Question_4',
-            'order' => 1,
+            'order' => 4,
+            'category_id' => $category4Id,
+            'form_id' => $formId,
+        ]);
+        Field::create([
+            'label' => 'Question_5',
+            'order' => 5,
+            'category_id' => $category3Id,
+            'form_id' => $formId,
+        ]);
+        Field::create([
+            'label' => 'Question_6',
+            'order' => 6,
+            'category_id' => $category2Id,
+            'form_id' => $formId,
+        ]);
+        Field::create([
+            'label' => 'Question_7',
+            'order' => 7,
+            'category_id' => $category1Id,
+            'form_id' => $formId,
+        ]);
+        Field::create([
+            'label' => 'Question_8',
+            'order' => 8,
             'category_id' => $category4Id,
             'form_id' => $formId,
         ]);
