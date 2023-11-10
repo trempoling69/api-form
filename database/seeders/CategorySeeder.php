@@ -15,16 +15,16 @@ class CategorySeeder extends Seeder
     {
         //
         Category::create([
-            'name' => 'Category1',
+            'name' => 'Creativite',
         ]);
         Category::create([
-            'name' => 'Category2',
+            'name' => 'Communication',
         ]);
         Category::create([
-            'name' => 'Category3',
+            'name' => 'Esprit critique',
         ]);
         Category::create([
-            'name' => 'Category4',
+            'name' => 'Cooperation',
         ]);
     }
 }

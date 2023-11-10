@@ -12,6 +12,8 @@ class Theme extends Model
 
     protected $fillable = [
         'name',
+        'label',
+        'photo'
     ];
 
     public function forms(): HasMany

@@ -12,6 +12,7 @@ class Field extends Model
     use HasFactory;
 
     protected $fillable = [
+        'name',
         'label',
         'form_id',
         'order',

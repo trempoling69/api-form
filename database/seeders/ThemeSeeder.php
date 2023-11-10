@@ -15,7 +15,9 @@ class ThemeSeeder extends Seeder
     {
         //
         Theme::create([
-            'name' => 'Theme1',
+            'name' => 'Superhero',
+            'label' => 'Quel super-héros je suis ?',
+            'photo' => 'https://resize-public.ladmedia.fr/r/641,/img/var/public/storage/images/news/quiz-quel-super-heros-marvel-sommeille-en-vous-1487138/38810344-1-fre-FR/Quiz-Quel-super-heros-Marvel-sommeille-en-vous.jpg'
         ]);
     }
 }

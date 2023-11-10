@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('fields', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('label');
             $table->integer('order');
             $table->foreignId('form_id')->constrained()->onDelete('cascade');

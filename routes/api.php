@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\HTTP\COntrollers\AuthController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\ThemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [AuthController::class, 'user']);
     Route::post('/answer', [AnswerController::class, 'postAnswer']);
     Route::get('/answer/{answerId}', [AnswerController::class, 'getAnswerById']);
+    Route::get('/theme', [ThemeController::class, 'getTheme']);
 });
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();

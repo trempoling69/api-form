@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Auth;
 
 class AnswerController extends Controller
 {
-    // dieu seul sait comment ça marche
     public function postAnswer(Request $request)
     {
         $contenuRequete = $request->all();

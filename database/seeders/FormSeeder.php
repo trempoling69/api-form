@@ -15,7 +15,7 @@ class FormSeeder extends Seeder
     public function run(): void
     {
         //
-        $themeId = Theme::where('name', 'Theme1')->first()->id;
+        $themeId = Theme::where('name', 'Superhero')->first()->id;
         Form::create([
             'title' => 'Form1',
             'theme_id' => $themeId,

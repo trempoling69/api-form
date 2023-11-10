@@ -17,11 +17,11 @@ class CelebritySeeder extends Seeder
         //
 
 
-        $profilArray = ['ACEG', 'ACEH', 'ACFG', 'ACFH', 'ADEG', 'ADEH', 'ADFG', 'ADFH', 'BCEG', 'BCEH', 'BCFG', 'BCFH', 'BDEG', 'BDEH', 'BDFG', 'BDFH'];
+        $profilArray = ['IEDM', 'IEDF', 'IECM', 'IECF', 'IODM', 'IODF', 'IOCM', 'IOCF', 'AEDM', 'AEDF', 'AECM', 'AECF', 'AODM', 'AODF', 'AOCM', 'AOCF'];
 
         $profilCollection = collect($profilArray);
         $profilCollection->map(function ($profil, $index) {
-            $themeId = Theme::where('name', 'Theme1')->first()->id;
+            $themeId = Theme::where('name', 'Superhero')->first()->id;
             Celebrity::create([
                 "name" => "celebrity_" . ($index + 1),
                 "description" => "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id accusamus, nulla ullam ipsum quisquam aliquid animi. Adipisci dolore itaque sunt sit odio assumenda nulla quod tenetur unde nobis? Sequi, fugiat.",

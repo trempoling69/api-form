@@ -15,49 +15,49 @@ class SkillSeeder extends Seeder
     public function run(): void
     {
         //
-        $category1Id = Category::where('name', 'Category1')->first()->id;
-        $category2Id = Category::where('name', 'Category2')->first()->id;
-        $category3Id = Category::where('name', 'Category3')->first()->id;
-        $category4Id = Category::where('name', 'Category4')->first()->id;
+        $category1Id = Category::where('name', 'Creativite')->first()->id;
+        $category2Id = Category::where('name', 'Communication')->first()->id;
+        $category3Id = Category::where('name', 'Esprit critique')->first()->id;
+        $category4Id = Category::where('name', 'Cooperation')->first()->id;
 
         Skill::create([
-            'name' => 'skill1_category1',
+            'name' => 'Inventeur',
+            'letter' => 'I',
+            'category_id' => $category1Id
+        ]);
+        Skill::create([
+            'name' => 'Ameliorateur',
             'letter' => 'A',
             'category_id' => $category1Id
         ]);
         Skill::create([
-            'name' => 'skill2_category1',
-            'letter' => 'B',
-            'category_id' => $category1Id
-        ]);
-        Skill::create([
-            'name' => 'skill1_category2',
-            'letter' => 'C',
-            'category_id' => $category2Id
-        ]);
-        Skill::create([
-            'name' => 'skill2_category2',
-            'letter' => 'D',
-            'category_id' => $category2Id
-        ]);
-        Skill::create([
-            'name' => 'skill1_category3',
+            'name' => 'Ecoute',
             'letter' => 'E',
+            'category_id' => $category2Id
+        ]);
+        Skill::create([
+            'name' => 'Orateur',
+            'letter' => 'O',
+            'category_id' => $category2Id
+        ]);
+        Skill::create([
+            'name' => 'Detachement',
+            'letter' => 'D',
             'category_id' => $category3Id
         ]);
         Skill::create([
-            'name' => 'skill2_category3',
-            'letter' => 'F',
+            'name' => 'Chercheur',
+            'letter' => 'C',
             'category_id' => $category3Id
         ]);
         Skill::create([
-            'name' => 'skill1_category4',
-            'letter' => 'G',
+            'name' => 'Meta',
+            'letter' => 'M',
             'category_id' => $category4Id
         ]);
         Skill::create([
-            'name' => 'skill2_category4',
-            'letter' => 'H',
+            'name' => 'Fonceur',
+            'letter' => 'F',
             'category_id' => $category4Id
         ]);
     }
