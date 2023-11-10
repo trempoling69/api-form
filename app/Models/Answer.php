@@ -23,6 +23,6 @@ class Answer extends Model
     }
     public function forms(): BelongsTo
     {
-        return $this->belongsTo(Form::class);
+        return $this->belongsTo(Form::class, 'form_id');
     }
 }

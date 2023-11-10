@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             FieldSeeder::class,
             SkillSeeder::class,
             FieldOptionSeeder::class,
-            
+            CelebritySeeder::class
         ]);
         // \App\Models\User::factory(10)->create();
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Answer;
+use App\Models\Celebrity;
 use App\Models\FieldOption;
 use App\Models\Skill;
 use Illuminate\Http\Request;
@@ -85,10 +86,12 @@ class AnswerController extends Controller
 
     public function getAnswerById(string $answerId)
     {
-        $answer = Answer::where('id', $answerId)->first();
+        $answer = Answer::where('id', $answerId)->with('forms')->first();
+        $celebrity = Celebrity::where('theme_id', $answer->forms->theme_id)->where('profil', $answer->profil)->first();
+        $response = ["answer" => $answer, "celebrity" => $celebrity];
         return response()->json([
             'status' => 200,
-            'data' => $answer
+            'data' => $response
         ]);
     }
 }

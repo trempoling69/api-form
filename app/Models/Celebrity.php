@@ -15,6 +15,7 @@ class Celebrity extends Model
         'description',
         'theme_id',
         'profil',
+        'photo'
     ];
 
     public function themes(): BelongsTo

@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('celebrities', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('description');
+            $table->string('description', 800);
             $table->foreignId('theme_id')->constrained()->onDelete('cascade');
             $table->string('profil');
+            $table->string('photo');
             $table->timestamps();
         });
     }
